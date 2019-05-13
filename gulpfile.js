@@ -4,14 +4,20 @@ const gulp = require("gulp"),
   autoprefixer = require("gulp-autoprefixer"),
   sourcemaps = require("gulp-sourcemaps"),
   gulpMinifyCss = require("gulp-minify-css"),
-  connect = require("gulp-connect");
+  connect = require("gulp-connect"),
+  postcss = require("gulp-postcss"),
+  adaptive = require("postcss-adaptive"),
   watch = require("gulp-watch");
 
 gulp.task("less", function() {
+   var plugins = [
+     adaptive({ remUnit: 75 }),
+   ]
   gulp
     .src("./pages/**/*.less")
     .pipe(sourcemaps.init())
     .pipe(less())
+    .pipe(postcss(plugins))
     .pipe(
       autoprefixer({
         browsers: ["last 6 versions", "> 1%"],
