@@ -1,0 +1,41 @@
+@import "../../css/common.less";
+.member{
+    &-head{
+        padding:60px 50px 40px; 
+        display: flex;
+        align-items:center;
+    }
+    &-name{
+        font-size:44px; 
+        margin-bottom:10px; 
+        color:@primary;
+		font-weight:800;
+    }
+    &-phone{
+        display: flex;
+        color:@c4;
+        align-items:center;
+    }
+    &-col{
+        display: flex;
+        align-items:center;
+        flex-wrap:wrap;
+        &-item{
+            width:33.333333%;
+            text-align:center;
+            color:@c4;
+        }
+        .value{
+            font-size:38px; 
+            color:@text;
+            font-weight:800;
+            margin-bottom:10px;
+        }
+    }
+    &-userimg{
+        width:100px; 
+        height:100px; 
+        margin-right:20px; 
+        border-radius:100px; 
+    }
+}
