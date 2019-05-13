@@ -1,0 +1,35 @@
+@import "../../css/common.less";
+
+body {
+  background: @white;
+}
+
+.integral {
+  &-head {
+    .f-c-sb();
+    .sw();
+    padding: 40px;
+    border-radius: 10px;
+    background: @white;
+    .icon {
+      margin-right: 20px;
+    }
+  }
+
+  &-current {
+    .f-c();
+  }
+  &-item-time{
+    font-size: 24px;
+    color: @c4;
+    margin-top: 6px;
+  }
+  &-item-number{
+    color: @c4;
+  }
+
+  &-wrap{
+   background: @bg;
+    padding: 40px;
+  }
+}
