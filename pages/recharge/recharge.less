@@ -5,7 +5,6 @@ body {
 }
 
 .recharge {
-
   &-head {
     img {
       width: 64px;
@@ -20,10 +19,103 @@ body {
     font-size: 26px;
 
   }
-  &-money{
+
+  &-money {
     font-size: 36px;
     font-weight: bold;
   }
+
+  &-operation {
+    overflow: hidden;
+    display: block !important;
+  }
+
+  &-record, &-pay {
+    float: right;
+    font-size: 28px;
+    line-height: 54px;
+    width: 150px;
+    border: 1px solid @primary;
+    text-align: center;
+    color: @primary;
+    margin-left: 20px;
+    border-radius: 8px;
+  }
+
+  &-content {
+    height: 1118px;
+    &-head {
+      font-size: 28px;
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &-shop {
+    display: flex;
+    flex: 1;
+  }
+
+  &-change {
+    margin-right: 10px;
+  }
+
+  &-money-list {
+    overflow: hidden;
+    margin: 0 40px;
+  }
+
+  &-money-item {
+    width: 48%;
+    float: left;
+    background: @c2;
+    color: #000;
+    height: 148px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+
+    &:nth-child(2n) {
+      margin-left: 4%;
+    }
+
+    &-select {
+      background: @primary;
+      color: @white;
+    }
+  }
+
+  &-amount {
+    margin-top: 32px;
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  &-give {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  &-tips {
+    font-size: 22px;
+    color: @c4;
+    margin: 0 40px;
+  }
+
+  &-confirm{
+    margin:40px;
+    background: @primary;
+    color: white;
+    text-align: center;
+    line-height: 92px;
+    border-radius: 80px;
+  }
+
+
+
 }
 
 

@@ -14,7 +14,7 @@
     <meta name="HandheldFriendly" content="true"/>
     <meta name="format-detection" content="telephone=no"/>
     <link rel="stylesheet" href="../style/style.css">
-    <script src="https://wxcs.liantuo.com/ShopCashier/js/memberCenter/javascripts/jquery.min.js?201905101"></script>
+    <script src="http://api.liantuofu.com/assets/js/jquery.min.js"></script>
     <title>充值</title>
 </head>
 <body>
@@ -28,8 +28,53 @@
                 </div>
                 <div class="recharge-money">¥110.00</div>
             </div>
+            <div class="list-item recharge-operation">
+                <div class="recharge-pay">会员支付</div>
+                <a href="../rechargeRecord/rechargeRecord.html">
+                    <div class="recharge-record">充值记录</div>
+                </a>
+            </div>
         </div>
+    </div>
+    <div class="recharge-content list">
+        <div class="recharge-content-head">
+            <div class="list-item" style="border-bottom: none">
+                <div class="recharge-shop">
+                    <img src="https://dpic.tiankong.com/5w/bf/QJ6442605464.jpg?x-oss-process=style/670ws">
+                    <div>明道海鲜店</div>
+                </div>
+                <div class="recharge-change">
+                    更换门店
+                </div>
+            </div>
+        </div>
+        <div class="recharge-money-list">
+            <div class="recharge-money-item recharge-money-item-select" onclick="selectAmount(this)">
+                <div class="recharge-amount">200元</div>
+                <div class="recharge-give">送60元</div>
+            </div>
+            <div class="recharge-money-item" onclick="selectAmount(this)">
+                <div class="recharge-amount">200元</div>
+                <div class="recharge-give">送60元</div>
+            </div>
+            <div class="recharge-money-item" onclick="selectAmount(this)">
+                <div class="recharge-amount">200元</div>
+                <div class="recharge-give">送60元</div>
+            </div>
+            <div class="recharge-money-item" onclick="selectAmount(this)">
+                <div class="recharge-amount">200元</div>
+                <div class="recharge-give">送60元</div>
+            </div>
+        </div>
+        <div class="recharge-tips">赠送 1000积分 + 10000经验 + 每满100减30元(1张)</div>
+        <div class="recharge-confirm">充值200元</div>
     </div>
 </div>
 </body>
+<script>
+    function selectAmount(e) {
+        $('.recharge-money-list > div').removeClass('recharge-money-item-select');
+        $(e).addClass('recharge-money-item-select');
+    }
+</script>
 </html>

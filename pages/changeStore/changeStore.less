@@ -1,0 +1,31 @@
+@import "../../css/common.less";
+body{
+  background: @bg;
+}
+.change-store{
+  margin: 40px;
+  &-search{
+    .f-c-sb();
+    &-left{
+      width: 454px;
+      padding: 0 40px;
+      height: 92px;
+      display: flex;
+      align-items: center;
+      background: @white;
+      border-radius: 40px;
+      input{
+        font-size: 28px;
+        line-height: 92px;
+        margin-left: 10px;
+        flex: 1;
+      }
+    }
+    &-right{
+      font-size: 30px;
+      color: @primary;
+      line-height: 40px;
+      padding:10px;
+    }
+  }
+}
