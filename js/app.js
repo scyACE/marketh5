@@ -21,7 +21,7 @@
       <div class="icon icon-User" ></div>我
     </a>
   </div>`
-		$(document).before(tabBar())
+		$(document).before()
   }
 
 })(jQuery)
