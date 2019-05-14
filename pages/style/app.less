@@ -5,7 +5,6 @@ html {
   font-size: 32px;
   color: @text;
 }
-<<<<<<< HEAD
 *{
     margin:0;
     padding:0;
@@ -13,32 +12,15 @@ html {
 }
 body{
 	font-family: sans-serif;
-=======
-
-* {
-  margin: 0;
-  padding: 0;
->>>>>>> 3623663dac8d5907a5dae536cfdc85439b66d9f2
 }
-
 a {
   text-decoration: none;
 }
-<<<<<<< HEAD
-.page{
-    height:100%;
-    &-container{
-       height:100%;
-    }
-=======
-
 .page {
   height: 100%;
-
   &-container {
     height: 100%;
   }
->>>>>>> 3623663dac8d5907a5dae536cfdc85439b66d9f2
 }
 
 .tabbar {
@@ -49,53 +31,28 @@ a {
   right: 0;
   bottom: 0;
   background: #fff;
-
   & > a {
-    width: 25%;
+    width:33.33333%;
     display: flex;
-<<<<<<< HEAD
-    height:100px;
-    position: fixed;
-    left:0;
-    right:0;
-    bottom:0;
-    background:#fff;
-    &>a{
-        width:25%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align:center;
-        font-size:23px;
-        color:#999;
-        flex-direction: column;
-        &.current{
-            color:@primary;
-        }
-    }
-    .icon{
-        font-size:42px;
-=======
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 23px;
-    color: #999;
     flex-direction: column;
-
-    &.current {
-      color: @primary;
->>>>>>> 3623663dac8d5907a5dae536cfdc85439b66d9f2
+    justify-content:center;
+    align-items:center;
+    height:100px;
+    background:#fff;
+    height:100px;
+    color: @c4;
+    font-size:22px;
+    &.current{
+        color:@primary;
     }
   }
-
   .icon {
-    font-size: 42px;
+    font-size:44px;
+    display: block;
   }
 }
 
 /* Button */
-<<<<<<< HEAD
 .button{
     display:inline-block;
     color:@text;
@@ -110,100 +67,38 @@ a {
             color:darken(@success,2%);
         }
     }
-    &-second{
-         background:@second;
-        color:#fff;
-         &:active{
-            color:darken(@second,2%);
-        }
-=======
-.button {
-  display: inline-block;
-  color: @text;
-  border: 1px solid @primary;
-  color: @primary;
-  padding: 8px 20px;
-  border-radius: 4px;
 
-  &-success {
-    background: @success;
-    color: #fff;
+		&-second {
+		  background: @second;
+		  color: #fff;
 
-    &:active {
-      color: darken(@success, 2%);
->>>>>>> 3623663dac8d5907a5dae536cfdc85439b66d9f2
-    }
-  }
+		  &:active {
+		    color: darken(@second, 2%);
+		  }
+		}
 
-  &-second {
-    background: @second;
-    color: #fff;
+		&-primary {
+		  background: @primary;
+		  color: #fff;
 
-    &:active {
-      color: darken(@second, 2%);
-    }
-  }
+		  &:active {
+		    color: darken(@primary, 2%);
+		  }
+		  &-block{
+		      display: block;
+		      height:88px;
+		      line-height:88px;
+		  }
+		}
 
-  &-primary {
-    background: @primary;
-    color: #fff;
-
-    &:active {
-      color: darken(@primary, 2%);
-    }
-<<<<<<< HEAD
-    &-block{
-        display: block;
-        height:88px;
-        line-height:88px;
-=======
-  }
-
-  &-error {
-    background: @error;
-    color: #fff;
-
-    &:active {
-      color: darken(@error, 2%);
->>>>>>> 3623663dac8d5907a5dae536cfdc85439b66d9f2
-    }
-  }
-
-  &-block {
-    display: block;
-    height: 88px;
-    line-height: 88px;
-  }
+		&-block {
+		  display: block;
+		  height: 88px;
+		  line-height: 88px;
+		}
 }
 
 /* List */
-<<<<<<< HEAD
-.list{
-    background:#fff;
-    margin:50px;
-    .sw();
-    border-radius:10px;
-    &-item{
-        border-bottom:1px solid @c2;
-        padding:30px;
-        position: relative;
-        .f-c-sb();
-        &::after{
-            content: '';
-            display:block;
-            width:12px;
-            height:12px;
-            border:3px solid @c3;
-            border-left:none;
-            border-bottom:none;
-            transform: rotate(45deg);
-        }
-        .icon{
-            font-size:40px;
-            color:@c3;
-            margin-right:15px;
-        }
-=======
 .list {
   background: #fff;
   margin: 40px;
@@ -214,7 +109,6 @@ a {
     .list-item:after {
       border: none;
       content: none;
->>>>>>> 3623663dac8d5907a5dae536cfdc85439b66d9f2
     }
   }
 
@@ -234,12 +128,6 @@ a {
       border-bottom: none;
       transform: rotate(45deg);
     }
-<<<<<<< HEAD
-    &-value{
-
-    }
-}
-=======
 
     .icon {
       font-size: 40px;
@@ -258,4 +146,3 @@ a {
   }
 }
 
->>>>>>> 3623663dac8d5907a5dae536cfdc85439b66d9f2
