@@ -14,6 +14,7 @@ gulp.task("less", function() {
  var plugins = [
    adaptive({ remUnit: 75 }),
  ]
+
   gulp
     .src("./pages/**/*.less")
     .pipe(sourcemaps.init())
@@ -29,8 +30,15 @@ gulp.task("less", function() {
     .pipe(concat("style.css"))
     .pipe(gulpMinifyCss())
     .pipe(gulp.dest("./pages/style/"));
-});
 
+
+
+});
+gulp.task('fonts', function () {
+    gulp.src('/pages/**/*.ttf')
+        .pipe(gulpFont2Base64())
+        .pipe(gulp.dest('path'));
+});
 gulp.task("reload", function(){
 	gulp.src("./pages/**/*.*")
 		.pipe(connect.reload());

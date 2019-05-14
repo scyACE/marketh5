@@ -14,16 +14,18 @@
     <meta name="HandheldFriendly" content="true" />
     <meta name="format-detection" content="telephone=no" />
   <link rel="stylesheet" href="../style/style.css">
-  <title>首页</title>
+  <title>我的</title>
 </head>
 <body>
+  <div id="home">
 
+  </div>
   <script src="http://api.liantuofu.com/assets/js/jquery.min.js"></script>
   <script src="../../js/app.js"></script>
 	<script >
-		app.tabBar();
-		$('.tabbar a').eq(1).addClass('current');
-		app.tab();
+		app.tabBar(0);
+
+		app.panel(`<div class="ad"><a><img src="https://dpic.tiankong.com/v7/39/QJ6102327705.jpg?x-oss-process=style/450hs" /></a></div>`)
 	</script>
 </body>
 </html>
