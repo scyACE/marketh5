@@ -1,27 +1,24 @@
-(funtion($){
+var app = {
+	tab:function(){
   $('.tab>div').on('click',function(e){
     $(this).addClass('active').siblings().removeClass('active')
   })
-
-  initTabbar(){
+},
+ tabBar:function(){
 	  let tabBar=`  <div class="tabbar">
-    <a href="/" exact activeclass="current">
+    <a href=".././home/home.html" exact activeclass="current">
       <div class="icon icon-Home"></div>
       首页
     </a>
-    <a href="/order" activeclass="current">
+    <a href="../../order/order.html" activeclass="current">
       <div class="icon icon-Document"></div>
       订单
     </a>
-    <a href="/cart" activeclass="current">
-      <div class="icon icon-Cart"></div>
-      购物车
-    </a>
-    <a href="/Member" activeclass="current">
+    <a href="../../member/member.html" activeclass="current">
       <div class="icon icon-User" ></div>我
     </a>
   </div>`
-		$(document).before()
+		$("body").append(tabBar);
+		console.log('ss')
   }
-
-})(jQuery)
+}
