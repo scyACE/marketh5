@@ -29,6 +29,6 @@ var app = {
 		  </a>
 		</div>`;
 		$("body").append(tabBar);
-		$('.tabbar a').eq(index).addClass('current');
+		$('.tabbar a').eq(index || 0).addClass('current');
   }
 }
