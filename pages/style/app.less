@@ -1,4 +1,5 @@
 @import '../../css/common.less';
+@import './reset.less';
 @import '../../css/icon.less';
 
 html {
@@ -113,11 +114,10 @@ a {
   }
 
   &-item {
-    border-bottom: 1px solid @c2;
     padding: 30px;
     position: relative;
     .f-c-sb();
-
+    .bline();
     &::after {
       content: '';
       display: block;
@@ -128,7 +128,11 @@ a {
       border-bottom: none;
       transform: rotate(45deg);
     }
-
+		&:last-child{
+			&:before{
+				background:transparent;
+			}
+		}
     .icon {
       font-size: 40px;
       color: @c3;
@@ -139,10 +143,82 @@ a {
   &-attr {
     flex: 1;
     color: @c4;
+    font-size:26px;
   }
 
   &-value {
-
+		color:@text;
   }
 }
+
+
+/*tab*/
+.tab{
+	display: flex;
+	&-item{
+		padding:30px 40px;
+		position: relative;
+		&.active{
+			color:@primary;
+			&:after{
+				content: '';
+				position: absolute;
+				height:6px;
+				bottom:0;
+				left:30%;
+				right:30%;
+				background:@primary;
+			}
+		}
+	}
+	&-content{
+		&-item{
+			display:none;
+		}
+	}
+}
+
+/*Empty*/
+.empty{
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	flex-direction: column;
+	margin-top:30%;
+	.icon{
+		color:@primary;
+		font-size:60px;
+		margin-bottom:20px;
+	}
+	&-txt{
+		font-size:23px;
+		color:@c4;
+		margin-bottom:30px;
+	}
+	.button{
+		font-size:32px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

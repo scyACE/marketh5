@@ -1,13 +1,14 @@
 var app = {
 	tab:function(){
+		$(".tab-content>div").eq(0).show();
   $('.tab>div').on('click',function(e){
     $(this).addClass('active').siblings().removeClass('active');
-    $(this).parent().siblings('.tabcont').eq($(this).index()).show().siblings().hide()
+    $(this).parent().siblings('.tab-content').children().eq($(this).index()).show().siblings().hide()
   })
 },
  tabBar:function(){
 	  let tabBar=`  <div class="tabbar">
-		  <a href="../home/home.html" exact activeclass="current">
+		  <a href="../index/index.html" exact activeclass="current">
 		    <div class="icon icon-Home"></div>
 		    首页
 		  </a>

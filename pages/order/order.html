@@ -18,10 +18,11 @@
 </head>
 <body>
   <div class="tab">
-    <div class="active">全部订单</div>
-    <div>退款</div>
+    <div class="tab-item active">全部订单</div>
+    <div class="tab-item">退款</div>
   </div>
   <div class="tab-content">
+	    <div class="tab-content-item">
     <div class="order-list">
       <div class="order-item">
       <div class="order-head">
@@ -42,12 +43,22 @@
       </div>
     </div>
     </div>
+	    </div>
+    <div class="tab-content-item">
+
+	    <div class="empty">
+				<div class="icon icon-Calendar"></div>
+				<div class="empty-txt">朋友，你还没有订单哦！</div>
+		    <div class="button button-primary">去逛逛</div>
+	    </div>
+    </div>
   </div>
   <script src="http://api.liantuofu.com/assets/js/jquery.min.js"></script>
   <script src="../../js/app.js"></script>
 	<script >
-		app.tabBar()
+		app.tabBar();
 		$('.tabbar a').eq(1).addClass('current');
+		app.tab();
 	</script>
 </body>
 </html>
