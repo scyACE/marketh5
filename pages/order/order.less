@@ -1,0 +1,59 @@
+@import "../../css/common.less";
+.order {
+  color: #fff;
+  &-item {
+    border-radius: 4px;
+    .sw();
+    margin:40px;
+    background:#fff;
+    padding:40px;
+    border-radius:8px;
+    &-bar{
+        border-top:1px solid #eee;
+        padding-top:40px;
+        text-align:right;
+        .button{
+	        font-size:24px;
+        }
+    }
+  }
+  &-amt{
+      font-weight:800;
+      color:@text;
+      font-size:30px;
+  }
+  &-mall {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex: 1;
+    &-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 90px;
+        margin-right:20px;
+        }
+    }
+  &-head {
+    display: flex;
+    align-items: center;
+
+  }
+  &-status{
+	  font-size:24px;
+  }
+  &-cont{
+       padding:30px 0 30px 100px;
+       font-size:24px;
+       .f-c-sb();
+         color:@c4;
+  }
+  &-title{
+      font-size:30px;
+  }
+  &-date{
+    color:@c4;
+    font-size:24px;
+  }
+
+}

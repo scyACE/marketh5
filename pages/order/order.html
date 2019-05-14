@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="author" content="Liantuofu.com" />
+  <meta name="viewport"
+    content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no,viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="x-rim-auto-match" content="none" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" href="../style/style.css">
+  <title>订单</title>
+</head>
+<body>
+  <div class="tab">
+    <div class="tab-item active">全部订单</div>
+    <div class="tab-item">退款</div>
+  </div>
+  <div class="tab-content">
+	    <div class="tab-content-item">
+    <div class="order-list">
+      <div class="order-item">
+      <div class="order-head">
+        <img class="order-mall-img" src="https://cdn.docschina.org/img/assets/img/logo/easymock-d526b1.png" alt="s" />
+        <div class="order-mall">
+          <div class="order-head-cont">
+            <div class="order-title"> 西少爷牛肉面</div>
+            <div class="order-date">2019-12-12 9:00</div>
+          </div>
+          <div class="order-status">已取消</div></div>
+      </div><div class="order-cont">
+        <div class="order-sku">冰茉香奶茶... 等5件商品</div>
+        <div class="order-amt">¥90.00</div>
+      </div>
+      <div class="order-item-bar">
+        <div class="button">取消订单</div>
+        <div class="button">再来一单</div>
+      </div>
+    </div>
+    </div>
+	    </div>
+    <div class="tab-content-item">
+
+	    <div class="empty">
+				<div class="icon icon-Calendar"></div>
+				<div class="empty-txt">朋友，你还没有订单哦！</div>
+		    <div class="button button-primary">去逛逛</div>
+	    </div>
+    </div>
+  </div>
+  <script src="http://api.liantuofu.com/assets/js/jquery.min.js"></script>
+  <script src="../../js/app.js"></script>
+	<script >
+		app.tabBar();
+		$('.tabbar a').eq(1).addClass('current');
+		app.tab();
+	</script>
+</body>
+</html>

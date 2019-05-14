@@ -1,25 +1,24 @@
 @import '../../css/common.less';
+@import './reset.less';
 @import '../../css/icon.less';
 
 html {
   font-size: 32px;
   color: @text;
 }
-
-* {
-  margin: 0;
-  padding: 0;
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
-
+body{
+	font-family: sans-serif;
+}
 a {
   text-decoration: none;
 }
-
-
-
 .page {
   height: 100%;
-
   &-container {
     height: 100%;
   }
@@ -33,77 +32,71 @@ a {
   right: 0;
   bottom: 0;
   background: #fff;
-
   & > a {
-    width: 25%;
+    width:33.33333%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 23px;
-    color: #999;
     flex-direction: column;
-
-    &.current {
-      color: @primary;
+    justify-content:center;
+    align-items:center;
+    height:100px;
+    background:#fff;
+    height:100px;
+    color: @c4;
+    font-size:22px;
+    &.current{
+        color:@primary;
     }
   }
-
   .icon {
-    font-size: 42px;
+    font-size:44px;
+    display: block;
   }
 }
 
 /* Button */
-.button {
-  display: inline-block;
-  color: @text;
-  border: 1px solid @primary;
-  color: @primary;
-  padding: 8px 20px;
-  border-radius: 4px;
-
-  &-success {
-    background: @success;
-    color: #fff;
-
-    &:active {
-      color: darken(@success, 2%);
+.button{
+    display:inline-block;
+    color:@text;
+    border:1px solid @primary;
+    color:@primary;
+    padding:8px 20px;
+    border-radius:4px;
+    &-success{
+        background:@success;
+        color:#fff;
+        &:active{
+            color:darken(@success,2%);
+        }
     }
-  }
 
-  &-second {
-    background: @second;
-    color: #fff;
+		&-second {
+		  background: @second;
+		  color: #fff;
 
-    &:active {
-      color: darken(@second, 2%);
-    }
-  }
+		  &:active {
+		    color: darken(@second, 2%);
+		  }
+		}
 
-  &-primary {
-    background: @primary;
-    color: #fff;
+		&-primary {
+		  background: @primary;
+		  color: #fff;
 
-    &:active {
-      color: darken(@primary, 2%);
-    }
-  }
+		  &:active {
+		    color: darken(@primary, 2%);
+		  }
+		  &-block{
+		      display: block;
+		      height:88px;
+		      line-height:88px;
+		  }
+		}
 
-  &-error {
-    background: @error;
-    color: #fff;
-
-    &:active {
-      color: darken(@error, 2%);
-    }
-  }
-
-  &-block {
-    display: block;
-    height: 88px;
-    line-height: 88px;
-  }
+		&-block {
+		  display: block;
+		  height: 88px;
+		  line-height: 88px;
+		}
 }
 
 /* List */
@@ -121,11 +114,10 @@ a {
   }
 
   &-item {
-    border-bottom: 1px solid @c2;
     padding: 30px;
     position: relative;
     .f-c-sb();
-
+    .bline();
     &::after {
       content: '';
       display: block;
@@ -136,7 +128,11 @@ a {
       border-bottom: none;
       transform: rotate(45deg);
     }
-
+		&:last-child{
+			&:before{
+				background:transparent;
+			}
+		}
     .icon {
       font-size: 40px;
       color: @c3;
@@ -147,10 +143,82 @@ a {
   &-attr {
     flex: 1;
     color: @c4;
+    font-size:26px;
   }
 
   &-value {
-
+		color:@text;
   }
 }
+
+
+/*tab*/
+.tab{
+	display: flex;
+	&-item{
+		padding:30px 40px;
+		position: relative;
+		&.active{
+			color:@primary;
+			&:after{
+				content: '';
+				position: absolute;
+				height:6px;
+				bottom:0;
+				left:30%;
+				right:30%;
+				background:@primary;
+			}
+		}
+	}
+	&-content{
+		&-item{
+			display:none;
+		}
+	}
+}
+
+/*Empty*/
+.empty{
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	flex-direction: column;
+	margin-top:30%;
+	.icon{
+		color:@primary;
+		font-size:60px;
+		margin-bottom:20px;
+	}
+	&-txt{
+		font-size:23px;
+		color:@c4;
+		margin-bottom:30px;
+	}
+	.button{
+		font-size:32px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
