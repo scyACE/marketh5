@@ -7,6 +7,10 @@ html{
 *{
     margin:0;
     padding:0;
+    box-sizing: border-box;
+}
+body{
+	font-family: sans-serif;
 }
 a{
     text-decoration:none;
@@ -14,12 +18,12 @@ a{
 .page{
     height:100%;
     &-container{
-       height:100%; 
+       height:100%;
     }
 }
 .tabbar{
     display: flex;
-    height:100px; 
+    height:100px;
     position: fixed;
     left:0;
     right:0;
@@ -31,7 +35,7 @@ a{
         align-items: center;
         justify-content: center;
         text-align:center;
-        font-size:23px; 
+        font-size:23px;
         color:#999;
         flex-direction: column;
         &.current{
@@ -39,7 +43,7 @@ a{
         }
     }
     .icon{
-        font-size:42px; 
+        font-size:42px;
     }
 }
 
@@ -49,8 +53,8 @@ a{
     color:@text;
     border:1px solid @primary;
     color:@primary;
-    padding:8px 20px; 
-    border-radius:4px; 
+    padding:8px 20px;
+    border-radius:4px;
     &-success{
         background:@success;
         color:#fff;
@@ -81,36 +85,36 @@ a{
     }
     &-block{
         display: block;
-        height:88px; 
-        line-height:88px; 
+        height:88px;
+        line-height:88px;
     }
 }
 
 /* List */
 .list{
     background:#fff;
-    margin:50px; 
+    margin:50px;
     .sw();
-    border-radius:10px; 
+    border-radius:10px;
     &-item{
         border-bottom:1px solid @c2;
-        padding:30px; 
+        padding:30px;
         position: relative;
         .f-c-sb();
         &::after{
             content: '';
             display:block;
-            width:12px; 
-            height:12px; 
+            width:12px;
+            height:12px;
             border:3px solid @c3;
             border-left:none;
             border-bottom:none;
             transform: rotate(45deg);
         }
         .icon{
-            font-size:40px; 
+            font-size:40px;
             color:@c3;
-            margin-right:15px; 
+            margin-right:15px;
         }
     }
     &-attr{
@@ -118,6 +122,6 @@ a{
         color:@c4;
     }
     &-value{
-        
+
     }
 }

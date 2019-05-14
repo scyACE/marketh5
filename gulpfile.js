@@ -7,12 +7,13 @@ const gulp = require("gulp"),
   connect = require("gulp-connect"),
   postcss = require("gulp-postcss"),
   adaptive = require("postcss-adaptive"),
+  plumber = require('gulp-plumber'),
   watch = require("gulp-watch");
 
 gulp.task("less", function() {
-   var plugins = [
-     adaptive({ remUnit: 75 }),
-   ]
+ var plugins = [
+   adaptive({ remUnit: 75 }),
+ ]
   gulp
     .src("./pages/**/*.less")
     .pipe(sourcemaps.init())
@@ -30,10 +31,15 @@ gulp.task("less", function() {
     .pipe(gulp.dest("./pages/style/"));
 });
 
+gulp.task("reload", function(){
+	gulp.src("./pages/**/*.*")
+		.pipe(connect.reload());
+});
 gulp.task("default", function() {
    connect.server({
      livereload: true,
      port: 8080
    });
+  watch("./pages/**/*.*", gulp.series("reload"));
   watch("./pages/**/*.less", gulp.series("less"));
 });
